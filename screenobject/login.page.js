@@ -22,6 +22,10 @@ class LoginPage {
         return $('//android.view.ViewGroup[@content-desc="Login button"]');
     }
 
+    get errorTextMsg(){
+        return $('//android.view.ViewGroup[@content-desc="generic-error-message"]/android.widget.TextView')
+    }
+
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
@@ -32,7 +36,7 @@ class LoginPage {
         await this.inputPassword.setValue(password);
         await this.btnLogin.click();
     }
-  
+
 }
 
 export default new LoginPage();
