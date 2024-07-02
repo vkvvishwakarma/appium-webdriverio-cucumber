@@ -22,6 +22,7 @@ class HomePage {
         (await this.hambergerMenu).click();
         (await this.loginOption).click();
     }
+    
 }
 
 export default new HomePage();

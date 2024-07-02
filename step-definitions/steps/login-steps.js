@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 import { expect, $ } from '@wdio/globals'
-import loginPage from '../../screenobjects/login.page.js';
-import homePage from '../../screenobjects/home.page.js';
+import loginPage from '../../screenobject/login.page.js'
+import homePage from '../../screenobject/home.page.js';
 
 Given(/^user is on the login screen$/, async () => {
     await homePage.navigateToLoginScreen();
