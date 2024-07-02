@@ -1,23 +1,22 @@
 import { $ } from '@wdio/globals'
-import Page from './page.js';
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class LoginPage extends Page {
+class LoginPage {
     /**
      * define selectors using getter methods
      */
     get inputUsername () {
-        return $('#username');
+        return $('//android.widget.EditText[@content-desc="Username input field"]');
     }
 
     get inputPassword () {
-        return $('#password');
+        return $('//android.widget.EditText[@content-desc="Password input field"]');
     }
 
-    get btnSubmit () {
-        return $('button[type="submit"]');
+    get btnLogin () {
+        return $('//android.view.ViewGroup[@content-desc="Login button"]');
     }
 
     /**
@@ -27,15 +26,9 @@ class LoginPage extends Page {
     async login (username, password) {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
+        await this.btnLogin.click();
     }
-
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    open () {
-        return super.open('login');
-    }
+  
 }
 
 export default new LoginPage();
