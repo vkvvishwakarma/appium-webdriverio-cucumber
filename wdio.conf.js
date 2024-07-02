@@ -1,3 +1,15 @@
+import path from 'path';
+/* 
+    **********************************************
+    Find out the current working directory to locate the .apk file to install on device and
+    to set under capability 
+*/
+const currentDirectory = process.cwd();
+const relativeFilePath = 'app/android/Android-MyDemoAppRN.1.3.0.build-244.apk';
+const absoluteFilePath = path.join(currentDirectory, relativeFilePath);
+/* 
+    *****************************************
+*/
 export const config = {
     //
     // ====================
@@ -53,10 +65,11 @@ export const config = {
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
-        browserName: 'Chrome',
-        'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
+        //browserName: 'Chrome',
+        'appium:deviceName': 'Pixel device',
+        'appium:platformVersion': '11.0',
+        'appium:automationName': 'UiAutomator2',
+        'appium:app':absoluteFilePath
     }],
 
     //
