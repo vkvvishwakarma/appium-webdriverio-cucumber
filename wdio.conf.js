@@ -66,10 +66,12 @@ export const config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
         //browserName: 'Chrome',
-        'appium:deviceName': 'Pixel device',
-        'appium:platformVersion': '11.0',
+        'appium:deviceName': 'Pixel 6 Pro',
+        'appium:platformVersion': '13.0',
         'appium:automationName': 'UiAutomator2',
-        'appium:app':absoluteFilePath
+        'appium:app':absoluteFilePath,
+        'appium:uiautomator2ServerLaunchTimeout': 60000
+
     }],
 
     //

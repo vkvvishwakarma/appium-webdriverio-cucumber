@@ -9,7 +9,7 @@ Feature: App login module verification
       | 1@2.com           | f-o-o    | Provided credentials do not match any user in this service.    |
       | ""                | ""       | Provided credentials do not match any user in this service.    |
       |bob@example.com    |  ""      | Provided credentials do not match any user in this service.    |
-      | alice@example.com | 10203040 | sorry, this user has been locked out                           |
+      | alice@example.com | 10203040 | Sorry, this user has been locked out.                           |
   
   Scenario Outline: Positive case for login with standard credential
     Given user is on the login screen
