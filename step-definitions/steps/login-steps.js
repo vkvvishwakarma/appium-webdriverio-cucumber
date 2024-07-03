@@ -11,7 +11,12 @@ When(/^user login with (.+) and (.+) and click on login button$/,async (username
     await loginPage.login(username, password);
 });
 
-Then(/^verify the successful login or error (.*)$/, async (errorMsg)=> {
+Then(/^verify the successful login (.*)$/, async (errorMsg)=> {
+    console.log("write the error message for verification = >"+errorMsg);
+    //await expect(homePage.productListScreen).toHaveText(errorMsg);
+})
+
+Then(/^verify the login error message (.*)$/, async (errorMsg)=> {
     console.log("write the error message for verification = >"+errorMsg);
     //await expect(homePage.productListScreen).toHaveText(errorMsg);
 })
