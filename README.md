@@ -24,11 +24,8 @@ npm install
 ```
 npx wdio
 ```
-### App execution recording available under "video-recording-excution" folder and reports are in allure-results folder
-### to open the allure reports manually then please run following commond on terminal
-```
-npx allure generate allure-results
-```
+### App execution recording available under "video-recording-excution" folder and reports are in allure-results folder after execution you can open the allure report by using following command
+
 ```
 npx allure open
 ```
