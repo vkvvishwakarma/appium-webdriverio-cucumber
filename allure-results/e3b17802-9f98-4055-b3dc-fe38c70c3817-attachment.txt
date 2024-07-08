@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//android.view.ViewGroup[@content-desc=\"generic-error-message\"]/android.widget.TextView"
-}
