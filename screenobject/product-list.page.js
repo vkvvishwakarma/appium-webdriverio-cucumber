@@ -1,10 +1,10 @@
-import { $ } from '@wdio/globals'
+import { $$ } from '@wdio/globals'
 
 
 class ProductList{
 
     get productPrice(){
-        return $$('//');
+       // return $$('//');
     }
     
 
